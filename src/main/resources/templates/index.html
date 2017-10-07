@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Fest 2017</title>
+</head>
+<body>
+
+<table>
+    <tr th:each="s : ${sessions}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.title}"></td>
+        <td th:text="${s.speakers}"></td>
+    </tr>
+</table>
+</body>
+</html>
