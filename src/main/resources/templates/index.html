@@ -5,9 +5,6 @@
     <title>Spring Fest 2017</title>
 </head>
 <body>
-
-
-
     <div class="row schedule-event" th:each="s : ${sessions}">
 <!--
         &lt;!&ndash; Session Time / Location &ndash;&gt;
@@ -38,8 +35,9 @@
             <h5 class="h5-lg" th:text="${s.title}">Conference check-in & Coffee</h5>
             <a th:href="${'#' + s.id}" class="visible-xs btn btn-info" data-toggle="collapse">詳細をみる</a>
             <div th:attr="id=${s.id}" class="collapse">
-                    <pre th:utext="${s.description}">まずは、マイクロサービスとは何か。基本的な考え方を理解しましょう。
-その上で、なぜ必要なのか、本当に必要なのか。どうしたら上手くいくのか、失敗するのは何故か。そんなトコロを考えていきましょう。</pre>
+               <pre th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
+                feugiat primis vultrice taculis egestas lobortis magna mauris, sodales sapien feugiat
+                rabitur nulla sapien lacus sed lacinia</pre>
             </div>
             <!-- Text -->
             <pre class="hidden-xs" th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
@@ -48,7 +46,5 @@
             </pre>
         </div>
     </div>
-
-
 </body>
 </html>
