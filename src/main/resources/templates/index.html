@@ -1,30 +1,151 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE HTML>
+<html prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+      xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="description"
+          content="Spring FestはJSUG（日本Springユーザ会）が主催するJavaのOSSフレームワーク Spring Framework の日本最大級のイベントです。">
+    <meta name="keywords" content="Spring Framework, JSUG">
+    <meta name="author" content="JSUG">
+
+    <meta property="og:title" content="Spring Fest 2017"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://springfest2017.springframework.jp/"/>
+    <meta property="og:image" content="http://springfest2017.springframework.jp/images/springfest2017.png"/>
+    <meta property="og:site_name" content="Spring Fest 2017"/>
+    <meta property="og:description"
+          content="Spring FestはJSUG（日本Springユーザ会）が主催するJavaのOSSフレームワーク Spring Framework の日本最大級のイベントです。"/>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@japan_spring">
+    <meta name="twitter:creator" content="@japan_spring">
+    <meta name="twitter:title" content="Spring Fest 2017">
+    <meta name="twitter:description"
+          content="Spring FestはJSUG（日本Springユーザ会）が主催するJavaのOSSフレームワーク Spring Framework の日本最大級のイベントです。">
+    <meta name="twitter:image:src" content="http://springfest2017.springframework.jp/images/springfest2017.png">
+
     <title>Spring Fest 2017</title>
+
+    <!-- ============ GOOGLE FONTS ============ -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600' rel='stylesheet' type='text/css'>
+
+    <!-- CSS -->
+    <!-- Animate css -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css"/>
+    <!-- Bootstrap v3.3.1 -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Custom styles CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style-fest.css">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+
 </head>
+
 <body>
-    <div class="row schedule-event" th:each="s : ${sessions}">
-<!--
-        &lt;!&ndash; Session Time / Location &ndash;&gt;
-        <div class="col-sm-2 col-md-2 session-data">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-26077150-16"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
 
-            &lt;!&ndash; Session Time &ndash;&gt;
-            <div class="s-data">
-                <span class="session-time black-color">9:00 AM </span>
-                <span class="session-time grey-color">9:15 AM</span>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-26077150-16');
+</script>
+
+<!-- LOADER TEMPLATE -->
+<div id="page-loader">
+    <div class="loader-icon fa fa-spin colored-border"></div>
+</div>
+<!-- /LOADER TEMPLATE -->
+
+<!-- HEADER -->
+<header>
+    <!-- YOUTUBE PLAYER -->
+    <!--<div id="video" data-video="ClIBmBT9clU" data-mute="true"></div>-->
+    <!-- /YOUTUBE PLAYER -->
+
+    <div id="particles"></div>
+
+    <div class="welcome">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-8">
+
+                        <!-- Social Icons -->
+                        <div class="social-icons">
+                            <ul>
+                                <li><a href="https://twitter.com/japan_spring" target="_blank"><i
+                                        class="fa fa-fw fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/JapanSpringUser" target="_blank"><i
+                                        class="fa fa-fw fa-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- /Social Icons -->
+
+                        <div class="logo"><img src="images/logo.png" style="width: 22%" lt=""></div>
+                        <div class="typed">Spring Fest 2017 is coming!</div>
+                        <p>Spring FrameworkはJavaの代表的なアプリケーションフレームワークであり、登場した2002年より現在に至るまで世界中の多くのJavaアプリケーションで利用されています。
+                            国内でも広く利用されておりますが、ユーザ間での情報交換・交流の場を提供し、さらなるSpring
+                            Frameworkの認知度の向上、普及促進を図るため、本カンファレンスを開催いたします。</p>
+                        <h3 style="margin-bottom: 0">2017/11/24 9:30 - 18:30 + ディナーパーティー @KFC Hall & Rooms</h3>
+                        <div class="countdown"></div>
+
+
+                        <!-- MOUSE ICON -->
+                        <div class="mouse-wrapper">
+                            <div class="mouse">
+                                <a href="#about">
+                                    <span>skroll</span>
+                                    <i class="fa fa-chevron-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /MOUSE ICON -->
+                    </div>
+                </div>
             </div>
-
-            &lt;!&ndash; Session Location &ndash;&gt;
-            <span class="session-room">Main Hall</span>
-
         </div>
--->
+    </div>
+</header>
+<!-- END HEADER -->
+
+<section class="session col-md-12" id="session">
+    <h2>Session</h2>
+    <div class="row schedule-event" th:each="s : ${sessions}">
+        <!--
+                &lt;!&ndash; Session Time / Location &ndash;&gt;
+                <div class="col-sm-2 col-md-2 session-data">
+
+                    &lt;!&ndash; Session Time &ndash;&gt;
+                    <div class="s-data">
+                        <span class="session-time black-color">9:00 AM </span>
+                        <span class="session-time grey-color">9:15 AM</span>
+                    </div>
+
+                    &lt;!&ndash; Session Location &ndash;&gt;
+                    <span class="session-room">Main Hall</span>
+
+                </div>
+        -->
         <!-- Session Speaker -->
         <div class="col-sm-3 col-sm-offset-1 col-md-2 session-speaker text-center">
             <th:block th:each="sp : ${s.speakers}">
-                <img class="img-responsive" th:src="${sp.imageUrl}" src="images/schedule-speaker-1.jpg" alt="speaker-avatar">
+                <img class="img-responsive" th:src="${sp.imageUrl}" src="images/schedule-speaker-1.jpg"
+                     alt="speaker-avatar">
                 <h5 class="h5-small" th:text="${sp.name}">Jonathan Barnes</h5>
                 <p class="p-small" th:text="${sp.belongTo}">Conference CEO</p>
             </th:block>
@@ -33,8 +154,11 @@
         <div class="col-sm-7 col-md-8 session-description">
             <!-- Session Title -->
             <h5 class="h5-lg" th:text="${s.title}">Conference check-in & Coffee</h5>
-            <p th:if="${s.id == 'e5e68eda-5d97-4547-982f-55ece2b554e8'}"><span class="label label-default">for Beginner</span>&nbsp;<span class="label label-default">Hands-on</span></p>
-            <p th:if="${s.id == '02f281f8-791b-48b1-825b-da439ec87999'}"><span class="label label-default">for Beginner</span></p>
+            <p th:if="${s.id == 'e5e68eda-5d97-4547-982f-55ece2b554e8'}"><span
+                    class="label label-default">for Beginner</span>&nbsp;<span
+                    class="label label-default">Hands-on</span></p>
+            <p th:if="${s.id == '02f281f8-791b-48b1-825b-da439ec87999'}"><span
+                    class="label label-default">for Beginner</span></p>
             <a th:href="${'#' + s.id}" class="visible-xs btn btn-info" data-toggle="collapse">詳細をみる</a>
             <div th:attr="id=${s.id}" class="collapse">
                <pre th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
@@ -48,5 +172,145 @@
             </pre>
         </div>
     </div>
+
+</section>
+
+<!-- CONTACT - PHOTO-->
+<div class="contact-photo col-md-6" id="access">
+    <div class="title-section">
+        <i class="fa fa-map"></i>
+        <h2>Access</h2>
+        <p>当日朝・昼休みは混雑が予想されますので、余裕を持ってお越しください。</p>
+        <div class="contact-info">
+            <div class="col-md-4">
+                <address><span><i class="fa fa-twitter"></i>Twitter</span></address>
+                <p><a href="https://twitter.com/japan_spring" target="_blank">@japan_spring</a></p>
+                <p>Twitterで近況を共有しますのでぜひフォローしてください。</p>
+            </div>
+            <div class="col-md-8">
+                <address><span><i class="fa fa-map-marker"></i>住所</span>東京都墨田区横網1-6-1KFCHall & Rooms</address>
+                <p></p>
+                <p>都営地下鉄大江戸線「両国駅」A1出入口より徒歩0分<br/>JR中央･総武線「両国駅」東口より徒歩約6分</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /CONTACT - PHOTO-->
+
+
+<!-- GOOGLE MAP  -->
+<div class="google-map col-md-6">
+    <div id="google-container"></div>
+    <div id="zoom-in"></div>
+    <div id="zoom-out"></div>
+</div>
+<!-- END GOOGLE MAP -->
+
+
+<!-- TEAM -->
+<section class="team col-md-12" id="sponsers">
+    <h2>SPONSERS</h2>
+    <div class="border">
+        <div class="col-md-3">
+            <a href="https://www.ulsystems.co.jp/" target="_blank"><img src="images/ULSystems_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="http://www.nttdata.com/jp/ja/index.html" target="_blank"><img
+                    src="images/NTT_DATA_Global_IT_Innovator_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.casareal.co.jp/" target="_blank"><img src="images/casareal_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://cloud.google.com/?hl=ja" target="_blank"><img src="images/google_cloud_logo.png"
+                                                                           alt=" "></a>
+        </div>
+    </div>
+    <div class="border">
+        <div class="col-md-3">
+            <a href="https://www.jasminesoft.co.jp/" target="_blank"><img src="images/jasminsoft_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="http://www.t-i-o.co.jp/" target="_blank"><img src="images/tio_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.nri.com/jp/" target="_blank"><img src="images/kigyorinen_j_1_CMYK.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://pivotal.io/jp" target="_blank"><img src="images/pivotal_logo.png" alt=" "></a>
+        </div>
+    </div>
+    <div class="border">
+        <div class="col-md-3">
+            <a href="https://www.fullness.co.jp/" target="_blank"><img src="images/fullness_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://about.yahoo.co.jp/" target="_blank"><img src="images/yahoo_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://linecorp.com/ja/" target="_blank"><img src="images/line_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://corp.rakuten.co.jp/" target="_blank"><img src="images/rakuten_logo.png" alt=" "></a>
+        </div>
+    </div>
+    <div>
+        <div class="col-md-3">
+            <a href="http://recruit-tech.co.jp/" target="_blank"><img src="images/r-tech_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="http://root42.jp/" target="_blank"><img src="images/root42_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.redhat.com/ja/global/japan" target="_blank"><img src="images/redhat_logo.png" alt=" "></a>
+        </div>
+        <div class="col-md-3">
+            <a href="https://www.tagbangers.co.jp/ja/" target="_blank"><img src="images/tagbangers_logo.png"
+                                                                            alt=" "></a>
+        </div>
+    </div>
+</section>
+<!-- END TEAM -->
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="copyright">Copyright © 2017 JSUG. All rights reserved.
+            </div>
+
+        </div>
+    </div>
+</footer>
+<!-- END FOOTER -->
+
+
+<!-- Javascript files -->
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Backstretch -->
+<script src="js/jquery.backstretch.min.js"></script>
+<!-- CountDown  -->
+<script src="js/jquery.countdown.js"></script>
+<!-- Validate form -->
+<script src="js/jquery.validate.js"></script>
+<!-- Smooth Scroll -->
+<script src="js/smooth-scroll.js"></script>
+<!-- Youtube Player -->
+<script src="js/jquery.youtubebackground.js"></script>
+<!-- Ajax chimp -->
+<script src="js/jquery.ajaxchimp.js"></script>
+<!-- Google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAl-EDTJ5_uU3zBIX7-wNTu-qSZr1DO5Dw"></script>
+<!-- jQuery Tweetie -->
+<script src="js/tweetie.js"></script>
+<!-- rAF -->
+<script src="js/sketch.min.js"></script>
+<!-- Particles -->
+<script src="js/particles.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Custom -->
+<script src="js/main.js"></script>
 </body>
 </html>
