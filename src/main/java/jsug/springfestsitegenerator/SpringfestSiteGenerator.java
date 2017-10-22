@@ -20,7 +20,7 @@ public class SpringfestSiteGenerator implements CommandLineRunner {
     private final ObjectMapper objectMapper;
 
     public SpringfestSiteGenerator(WebClient.Builder builder, SpringTemplateEngine templateEngine, ObjectMapper objectMapper) {
-        this.webClient = builder.baseUrl("https://portside-api.cfapps.pez.pivotal.io").build();
+        this.webClient = builder.baseUrl("https://portside-api.cfapps.io").build();
         this.templateEngine = templateEngine;
         this.objectMapper = objectMapper;
     }
