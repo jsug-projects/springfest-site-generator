@@ -154,7 +154,7 @@
         <div class="col-sm-7 col-md-8 session-description">
             <!-- Session Title -->
             <h5 class="h5-lg" th:text="${s.title}">Conference check-in & Coffee</h5>
-            <p th:if="${s.id == 'e5e68eda-5d97-4547-982f-55ece2b554e8' || s.id == '02f281f8-791b-48b1-825b-da439ec87999' || s.id == '3c5012c7-9469-48ba-a4b5-041c63f16e10'}"><span class="label label-default">for Beginner</span></p>
+            <p th:if="${s.id == 'e5e68eda-5d97-4547-982f-55ece2b554e8' || s.id == '02f281f8-791b-48b1-825b-da439ec87999' || s.id == '3c5012c7-9469-48ba-a4b5-041c63f16e10' || s.id == 'a34ae07e-5f32-4ce1-98ed-39358d512f4f'}"><span class="label label-default">for Beginner</span></p>
             <a th:href="${'#' + s.id}" class="visible-xs btn btn-info" data-toggle="collapse">詳細をみる</a>
             <div th:attr="id=${s.id}" class="collapse">
                <pre th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
