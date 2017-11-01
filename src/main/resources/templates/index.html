@@ -143,50 +143,65 @@
 <section class="session col-md-12" id="session">
     <h2>Session</h2>
     <div class="row schedule-event" th:each="s : ${sessions}">
-        <!--
-                &lt;!&ndash; Session Time / Location &ndash;&gt;
-                <div class="col-sm-2 col-md-2 session-data">
-
-                    &lt;!&ndash; Session Time &ndash;&gt;
-                    <div class="s-data">
-                        <span class="session-time black-color">9:00 AM </span>
-                        <span class="session-time grey-color">9:15 AM</span>
-                    </div>
-
-                    &lt;!&ndash; Session Location &ndash;&gt;
-                    <span class="session-room">Main Hall</span>
-
-                </div>
-        -->
+        <!-- Session Time / Location -->
+        <div class="col-xs-2 col-sm-2 col-md-2 session-data">
+            <!-- Session Time -->
+            <div class="s-data">
+                <span class="session-time black-color">9:00 - 9:45</span>
+            </div>
+            <!-- Session Location -->
+            <span class="session-room">Main Hall</span>
+        </div>
         <!-- Session Speaker -->
-        <div class="col-sm-3 col-sm-offset-1 col-md-2 session-speaker text-center">
+        <div class="hidden-xs col-sm-3 col-md-2 session-speaker text-center">
             <th:block th:each="sp : ${s.speakers}">
                 <img class="img-responsive" th:src="${sp.imageUrl}" src="images/schedule-speaker-1.jpg"
                      alt="speaker-avatar">
                 <h5 class="h5-small" th:text="${sp.name}">Jonathan Barnes</h5>
-                <p class="p-small" th:text="${sp.belongTo}">Conference CEO</p>
             </th:block>
         </div>
         <!-- Session Description -->
-        <div class="col-sm-7 col-md-8 session-description">
+        <div class="col-xs-12 col-sm-7 col-md-8 session-description">
             <!-- Session Title -->
             <h5 class="h5-lg" th:text="${s.title}">Conference check-in & Coffee</h5>
             <p th:if="${s.id == 'e5e68eda-5d97-4547-982f-55ece2b554e8' || s.id == '02f281f8-791b-48b1-825b-da439ec87999' || s.id == '3c5012c7-9469-48ba-a4b5-041c63f16e10' || s.id == 'a34ae07e-5f32-4ce1-98ed-39358d512f4f'}"><span class="label label-success">for Beginner</span></p>
             <p th:if="${s.id == 'b0069c38-6e7d-449c-98a3-52e8555ce34b'}"><span class="label label-info">ランチセッション</span></p>
-            <a th:href="${'#' + s.id}" class="visible-xs btn btn-info" data-toggle="collapse">詳細をみる</a>
+            <a th:href="${'#' + s.id}" class="visible-xs more" data-toggle="collapse">詳細をみる</a>
             <div th:attr="id=${s.id}" class="collapse">
                <pre th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
                 feugiat primis vultrice taculis egestas lobortis magna mauris, sodales sapien feugiat
                 rabitur nulla sapien lacus sed lacinia</pre>
+                <div class="visible-xs">
+                    <th:block th:each="sp : ${s.speakers}">
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <img class="img-responsive" th:src="${sp.imageUrl}" src="https://user-images.githubusercontent.com/3993274/31573444-44861aac-b0f7-11e7-9f4e-830b8ce98a86.jpg"
+                                     alt="speaker-avatar">
+                            </div>
+                            <div class="col-xs-8">
+                                <h5 class="h5-small" th:text="${sp.name}">長谷川  裕一</h5>
+                                <p class="p-small" th:text="${sp.belongTo}">Starlight&amp;Storm LLC代表 / 日本Springユーザ会会長</p>
+                            </div>
+                        </div>
+                    </th:block>
+                </div>
             </div>
             <!-- Text -->
-            <pre class="hidden-xs" th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
+            <div class="hidden-xs">
+                <pre th:utext="${s.description}">Vitae nunc quisque sapien justo aliquet molestie purus. Semper lacus cursus porta,
                 feugiat primis vultrice taculis egestas lobortis magna mauris, sodales sapien feugiat
                 rabitur nulla sapien lacus sed lacinia
-            </pre>
+                </pre>
+                <div>
+                    <th:block th:each="sp : ${s.speakers}">
+                        <h5 class="h5-small" th:text="${sp.name}">Jonathan Barnes</h5>
+                        <p class="p-small" th:text="${sp.belongTo}">Conference CEO</p>
+                        <p th:text="${sp.profile}"></p>
+                    </th:block>
+                </div>
+            </div>
         </div>
     </div>
-
 </section>
 
 <!-- MAP -->
